@@ -15,7 +15,7 @@ def create_user(owner_name,owner_discord_id, custom_name, dare1, dare2, dare3):
     """
 
     user_info = {
-        "owner_name": owner_name
+        "owner_name": owner_name,
         "owner_discord_id" : owner_discord_id,
         "name": custom_name,
         "dares": [dare1, dare2, dare3],
@@ -26,9 +26,9 @@ def create_user(owner_name,owner_discord_id, custom_name, dare1, dare2, dare3):
 
 # Example usage:
 custom_name = "John Doe"
-dare1 = "Kat"
-dare2 = "Rasp"
-dare3 = "Grey"
+dare1 = "Give me a lap dance."
+dare2 = "Sing the first song that comes to your mind when you think of me."
+dare3 = "Be my slave for a day."
 user_data = create_user(custom_name, dare1, dare2, dare3)
 print(f"User Information:\nName: {user_data['name']}\nDares: {user_data['dares']}\nPoints: {user_data['points']}")
 
@@ -80,3 +80,4 @@ def read_user_by_discord_id(users,owner_discord_id):
         if user['owner_discord_id'] == owner_discord_id:
             result_user.append(user)
     pass
+#test
