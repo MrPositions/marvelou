@@ -79,5 +79,14 @@ def read_user_by_discord_id(users,owner_discord_id):
     for user in users:
         if user['owner_discord_id'] == owner_discord_id:
             result_user.append(user)
-    pass
-#test
+
+def save_users(users,save_filename):
+    with open(save_filename, 'w') as file:
+        json.dump(users,file)
+    return users
+
+def load_users(save_filename):
+    with open(save_filename, 'r') as file:
+        loaded_users = json.load(file)
+
+
