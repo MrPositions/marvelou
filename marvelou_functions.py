@@ -26,11 +26,13 @@ def create_user(owner_name,owner_discord_id, custom_name, dare1, dare2, dare3):
     return user_info
 
 # Example usage:
+owner_name = "Pos"
+owner_discord_id = "Positions"
 custom_name = "John Doe"
 dare1 = "Give me a lap dance."
 dare2 = "Sing the first song that comes to your mind when you think of me."
 dare3 = "Be my slave for a day."
-user_data = create_user(custom_name, dare1, dare2, dare3)
+user_data = create_user(owner_name,owner_discord_id,custom_name, dare1, dare2, dare3)
 print(f"User Information:\nName: {user_data['name']}\nDares: {user_data['dares']}\nPoints: {user_data['points']}")
 
 def draw_card():
@@ -90,4 +92,12 @@ def load_users(save_filename):
     with open(save_filename, 'r') as file:
         loaded_users = json.load(file)
 
-
+if __name__ == "__main__":
+    owner_name = "Pos"
+    owner_discord_id = "Positions"
+    custom_name = "John Doe"
+    dare1 = "Give me a lap dance."
+    dare2 = "Sing the first song that comes to your mind when you think of me."
+    dare3 = "Be my slave for a day."
+    user_data = create_user(owner_name, owner_discord_id, custom_name, dare1, dare2, dare3)
+    print(f"User Information:\nName: {user_data['name']}\nDares: {user_data['dares']}\nPoints: {user_data['points']}")
