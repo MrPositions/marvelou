@@ -18,6 +18,7 @@ base_command = SlashCommand(
 )
 @base_command.subcommand(sub_cmd_name="create_user", sub_cmd_description="Create a user and registers user in point system")
 @slash_option(name="user_name",required=True, description="Name of user", opt_type=OptionType.STRING)
+@slash_option(name="points",required=True, description="Points earned", opt_type=OptionType.INTEGER)
 async def create_user(ctx: SlashContext, user_name:str, points:int):
     user = ctx.author  # Get the user who invoked the command
     #marvelou_functions.pull_database()
