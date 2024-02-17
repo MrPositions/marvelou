@@ -14,7 +14,8 @@ base_command = SlashCommand(
 )
 @base_command.subcommand()
 @slash_option()
-async def create_user()
+async def create_user():
+
   pass
 
 @base_command.subcommand(sub_cmd_name="create_user", sub_cmd_description="Create a user and registers user in point system")

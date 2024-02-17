@@ -1,4 +1,5 @@
 import random
+import json
 
 def create_user(owner_name,owner_discord_id, custom_name, dare1, dare2, dare3):
     """
